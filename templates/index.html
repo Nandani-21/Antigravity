@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Workspace Monitor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Visionary AI</title>
+    <!-- Bold Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!-- Phosphor Icons for modern minimal icons -->
+    <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
-            <i class="ph-fill ph-eye"></i>
-            <span>Visionary AI</span>
+            <i class="ph-fill ph-target"></i>
+            <span>VISIONARY AI</span>
         </div>
         <div class="nav-controls">
-            <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">
+            <button id="theme-toggle" class="icon-btn" title="Toggle Mode">
                 <i class="ph ph-sun"></i>
             </button>
             <div class="timer-badge">
                 <i class="ph ph-clock"></i>
-                <span id="timer-val">0</span>m session
+                <span id="timer-val">0</span>M ONLINE
             </div>
         </div>
     </nav>
 
     <main class="dashboard">
-        <!-- LEFT SIDE: Video Feed Section -->
+        <!-- LEFT SIDE: Video Feed -->
         <section class="video-section">
             <div class="video-container" id="video-container">
                 <img src="{{ url_for('video_feed') }}" alt="Live Feed" id="video-stream">
                 
                 <div class="video-overlay top-left">
                     <div class="status-indicator live">
-                        <div class="dot"></div> Live Analysis
+                        <div class="dot"></div> LIVE TRACKING
                     </div>
                 </div>
             </div>
@@ -46,67 +47,67 @@
 
         <!-- RIGHT SIDE: Dashboard Panel -->
         <aside class="dashboard-panel">
-            <h2 class="section-title">System Status</h2>
+            <h2 class="section-title">Diagnostics</h2>
             
-            <!-- A. Status Cards -->
+            <!-- Status Cards -->
             <div class="status-grid">
                 <div class="stat-card" id="card-posture">
-                    <div class="stat-icon"><i class="ph ph-person"></i></div>
+                    <div class="stat-icon"><i class="ph ph-user-focus"></i></div>
                     <div class="stat-info">
                         <h3>Posture</h3>
-                        <p class="stat-value" id="val-posture">Analyzing...</p>
+                        <p class="stat-value" id="val-posture">SCANNING</p>
                     </div>
                 </div>
 
                 <div class="stat-card" id="card-eyes">
                     <div class="stat-icon"><i class="ph ph-eye"></i></div>
                     <div class="stat-info">
-                        <h3>Eye Status</h3>
-                        <p class="stat-value" id="val-eyes">Analyzing...</p>
+                        <h3>Ocular State</h3>
+                        <p class="stat-value" id="val-eyes">SCANNING</p>
                     </div>
                 </div>
 
                 <div class="stat-card" id="card-distance">
-                    <div class="stat-icon"><i class="ph ph-computer-tower"></i></div>
+                    <div class="stat-icon"><i class="ph ph-crosshair"></i></div>
                     <div class="stat-info">
-                        <h3>Distance</h3>
-                        <p class="stat-value" id="val-distance">Analyzing...</p>
+                        <h3>Proximity</h3>
+                        <p class="stat-value" id="val-distance">SCANNING</p>
                     </div>
                 </div>
             </div>
 
-            <!-- D. Stats Section -->
+            <!-- Stats Section -->
             <div class="metrics-card">
-                <h3>Session Metrics</h3>
+                <h3>Incident Log</h3>
                 <div class="metric-row">
                     <div class="metric-label">
-                        <i class="ph-fill ph-warning-circle text-warning"></i>
-                        Posture Warnings
+                        <i class="ph-fill ph-warning text-warning"></i>
+                        Spine Deviations
                     </div>
                     <div class="metric-count" id="count-posture">0</div>
                 </div>
                 <div class="metric-row">
                     <div class="metric-label">
-                        <i class="ph-fill ph-eye-closed text-danger"></i>
-                        Eye Strain Alerts
+                        <i class="ph-fill ph-drop text-danger"></i>
+                        Fatigue Alerts
                     </div>
                     <div class="metric-count" id="count-eyes">0</div>
                 </div>
             </div>
 
-            <!-- Settings / Calibration -->
+            <!-- Settings -->
             <div class="controls-card">
-                <h3>Settings</h3>
+                <h3>System Config</h3>
                 <div class="control-row">
-                    <span>Voice Alerts & Sounds</span>
+                    <span>Audio Feedback</span>
                     <label class="switch">
                         <input type="checkbox" id="voice-toggle" checked>
                         <span class="slider round"></span>
                     </label>
                 </div>
                 <div class="btn-group">
-                    <button id="test-voice" class="btn btn-outline">Test Audio</button>
-                    <button id="calibrate-btn" class="btn btn-primary">Recalibrate / Reset</button>
+                    <button id="test-voice" class="btn btn-outline">TEST AUDIO</button>
+                    <button id="calibrate-btn" class="btn btn-primary">RECALIBRATE</button>
                 </div>
             </div>
         </aside>
